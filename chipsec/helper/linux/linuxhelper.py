@@ -192,10 +192,10 @@ class LinuxHelper(Helper):
         return True
 
     def start(self, start_driver, driver_exists=False):
-        if start_driver:
-            if os.path.exists(self.DEVICE_NAME):
-                subprocess.call(["rmmod", self.MODULE_NAME])
-            self.load_chipsec_module()
+        #if start_driver:
+        #    if os.path.exists(self.DEVICE_NAME):
+        #       subprocess.call(["rmmod", self.MODULE_NAME])
+        #    self.load_chipsec_module()
         self.init(start_driver)
         if logger().DEBUG:
             logger().log("[helper] Linux Helper started/loaded")
@@ -203,8 +203,8 @@ class LinuxHelper(Helper):
 
     def stop(self, start_driver):
         self.close()
-        if self.driver_loaded:
-            subprocess.call(["rmmod", self.MODULE_NAME])
+        # if self.driver_loaded:
+        #    subprocess.call(["rmmod", self.MODULE_NAME])
         if logger().DEBUG:
             logger().log("[helper] Linux Helper stopped/unloaded")
         return True
