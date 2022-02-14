@@ -19,6 +19,7 @@ The following registers are defined in the reference PPR but have not been inclu
   <!-- #################################### -->
   <info family="core">
     <sku did="0x1630" name="Renoir" code="Renoir" longname="Renoir Root Complex" />
+    <sku did="0x15D0" name="Raven Ridge" code="Raven Ridge" longname="Raven Ridge Root Complex" />
   </info>
 
   <!-- #################################### -->
